@@ -1,5 +1,3 @@
-// Example of Jenkins pipeline script
-
 pipeline {
   stages {
     stage("Build") {
@@ -18,4 +16,4 @@ pipeline {
    }
    // And next stages if you want to define further...
  } // End of stages
-} // End of p
+}
