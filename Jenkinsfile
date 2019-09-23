@@ -1,15 +1,14 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent {
+        docker {
+            image 'maven:3-alpine' 
+            args '-v /root/.m2:/root/.m2' 
+        }
+    }
     stages {
-        stage('build') {
+        stage('Build') { 
             steps {
-                sh 'mvn --version'
-                
-                echo "Hello, Pipeline!"
-          // Compile a Java file. This requires JDKconfiguration from Jenkins
-          javac HelloWorld.java
-          // Execute the compiled Java binary called HelloWorld. This requires JDK configuration from Jenkins
-          java HelloWorld
+                sh 'mvn -B -DskipTests clean package' 
             }
         }
     }
