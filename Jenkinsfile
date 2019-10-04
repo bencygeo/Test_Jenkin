@@ -16,7 +16,7 @@ pipeline {
       
         script {
           echo 'Stage 2'
-          whoami
+          
           sh label: '', script: './runJava.sh'
         
           }
