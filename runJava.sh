@@ -1,3 +1,4 @@
 #!/bin/bash
 whoami
-echo "HELLO WORLD" > /tmp/testfile
+javac HelloWorld.java
+java HelloWorld
