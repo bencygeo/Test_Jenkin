@@ -17,7 +17,7 @@ pipeline {
         script {
           echo 'Stage 2'
           
-          sh label: '', script: './runJava.sh'
+          sh label: '', script: 'bash ./runJava.sh'
         
           }
         }
