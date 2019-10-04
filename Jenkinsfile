@@ -6,9 +6,8 @@ pipeline {
         script {
           echo 'Stage 1'
           git 'https://github.com/bencygeo/Test_Jenkin.git'
-          def timeStamp = Calendar.getInstance().getTime().format('YYYYMMdd-hhmmss',TimeZone.getTimeZone('CST'))
-          println "Timestamp is: ${timeStamp}"
-          
+          name "Ben"
+          echo "hello $(name)"
         }
       }
     }
