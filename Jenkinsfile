@@ -1,19 +1,20 @@
 pipeline {
   agent any
   stages {
-  stage('Stage 1') {
+  stage('Clone sources') {
       steps {
         script {
           echo 'Stage 1'
           git 'https://github.com/bencygeo/Test_Jenkin.git'
-          sh label: '', script: 'runJava.sh'
+          
         }
       }
     }
-  stage('Stage 2') {
+  stage('Stage build') {
       steps {
         script {
           echo 'Stage 2'
+          sh label: '', script: 'runJava.sh'
         }
       }
     }
