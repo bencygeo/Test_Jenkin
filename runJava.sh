@@ -1,3 +1,2 @@
 #!/bin/bash
-javac HelloWorld.java
-java first
+echo "HELLO WORLD" > /tmp/testfile
