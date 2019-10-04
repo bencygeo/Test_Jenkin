@@ -5,6 +5,7 @@ pipeline {
       steps {
         script {
           echo 'Stage 1'
+          git 'https://github.com/bencygeo/Test_Jenkin.git'
         }
       }
     }
