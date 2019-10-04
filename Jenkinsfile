@@ -6,7 +6,7 @@ pipeline {
         script {
           echo 'Stage 1'
           git 'https://github.com/bencygeo/Test_Jenkin.git'
-          javac HelloWorld.java
+          sh label: '', script: 'runJava.sh'
         }
       }
     }
