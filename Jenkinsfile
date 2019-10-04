@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+  PATH = "/usr/local/bin:$PATH"
+}
   stages {
   stage('Clone sources') {
       steps {
@@ -13,14 +16,14 @@ pipeline {
   stage('Stage build') {
     
       steps {
-        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']){
+      
         script {
           echo 'Stage 2'
           
           sh label: '', script: 'runJava.sh'
         
           }
-        }}
+        }
     }
   }
 }
