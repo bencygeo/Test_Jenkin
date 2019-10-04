@@ -1,9 +1,6 @@
 pipeline {
   agent any
-  environment {
-  PATH = "/usr/local/bin:$PATH"
-}
-  stages {
+    stages {
   stage('Clone sources') {
       steps {
         script {
