@@ -7,7 +7,7 @@ pipeline {
           echo 'Stage 1'
           git 'https://github.com/bencygeo/Test_Jenkin.git'
           name "Ben"
-          echo "hello $(name)"
+          echo "hello ${name}"
         }
       }
     }
