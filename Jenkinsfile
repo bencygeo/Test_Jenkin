@@ -13,13 +13,14 @@ pipeline {
   stage('Stage build') {
     
       steps {
+        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']){
         script {
           echo 'Stage 2'
-          withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']){
+          
           sh label: '', script: 'runJava.sh'
         
-          }}
-    }
+          }
+        }}
     }
   }
 }
