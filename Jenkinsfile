@@ -22,5 +22,8 @@ pipeline {
           }
         }
     }
+      timestamps {
+    // some block
+}
   }
 }
